@@ -1,0 +1,20 @@
+id: 数据唯一标识。
+transaction_date: 交易日期。
+product_id: 产品 ID。
+quantity: 产品数量。
+price: 单价。
+customer_id: 客户 ID。
+store_id: 店铺 ID。
+discount: 折扣比例。
+total_amount: 总金额（包含折扣）。
+payment_method: 支付方式。
+region: 区域。
+salesperson_id: 销售员 ID。
+category_id: 类别 ID。
+brand: 品牌。
+is_returned: 是否退货。
+return_reason: 退货原因（如退货）。
+return_date: 退货日期（如退货）。
+delivery_status: 交付状态。
+delivery_date: 交付日期（如交付）。
+remarks: 备注信息。
