@@ -8,6 +8,7 @@ from pyspark import SparkConf, SparkContext
     Data: ${DATE}
 -------------------------------------------
 '''
+
 if __name__ == '__main__':
     # 设置环境变量
     os.environ['JAVA_HOME'] = r'E:\environment\java\jdk-1.8'  # 设置 Java 路径
@@ -18,7 +19,7 @@ if __name__ == '__main__':
     os.environ['PYSPARK_DRIVER_PYTHON'] = r'D:\Python\miniconda3\python.exe'
 
     # spark context对象，简称sc
-    conf = SparkConf().setMaster("local[*]").setAppName("{NAME}")  # 这里是名字
+    conf = SparkConf().setMaster("local[*]").setAppName("${NAME}")  # 这里是名字
     sc = SparkContext(conf=conf)
     print(sc)
 '''-------------------------------------------------'''

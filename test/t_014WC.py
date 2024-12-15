@@ -39,7 +39,7 @@ if __name__ == '__main__':
     print(rdd2)
     result = rdd2.take(10)
     print(result)
-    # rdd2.saveAsTextFile("file:///D:/XXX/PycharmProjects/Pyspark_sy/datas/result")
+    rdd2.saveAsTextFile("file:///D:/XXX/PycharmProjects/Pyspark_sy/datas/result")
 
     # 程序结束
     spark.stop()

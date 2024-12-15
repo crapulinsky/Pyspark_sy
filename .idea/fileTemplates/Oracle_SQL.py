@@ -22,7 +22,7 @@ if __name__ == '__main__':
 
     # 创建 SparkSession，设置ojdbc驱动路径
     spark = SparkSession.builder \
-        .appName("{NAME} DBRead") \
+        .appName("${NAME} DBRead") \
         .config("spark.driver.extraClassPath", "E:/environment/java/ojdbc8.jar") \
         .config("spark.executor.extraClassPath", "E:/environment/java/ojdbc8.jar") \
         .getOrCreate()

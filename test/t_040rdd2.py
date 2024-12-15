@@ -1,12 +1,13 @@
 import os
 import time
 from pyspark.sql import SparkSession
+
 '''
 -------------------------------------------
     Description: TODO:
-    SourceFile: ${NAME}
-    Author: ${USER}
-    Data: ${DATE}
+    SourceFile: t_040rdd2
+    Author: SMOG
+    Data: 2024/12/15
 -------------------------------------------
 '''
 if __name__ == '__main__':
@@ -22,13 +23,20 @@ if __name__ == '__main__':
 
     # 创建 SparkSession
     spark = SparkSession.builder \
-        .appName("${NAME}") \
+        .appName("t_040rdd2") \
         .master("local[*]") \
         .getOrCreate()
     print(spark)
 
+    collection = "Here is a breakdown of the issue and possible resolution".split(" ")
 
+    rdd1 = spark.sparkContext.parallelize(collection,2)
 
+    rdd2 = rdd1.keyBy(lambda x : x.lower()[0])
+    print(rdd2.collect())
+
+    rdd3 = rdd2.mapValues(lambda x : x.upper())
+    print(rdd3.collect())
 
 
 
