@@ -6,7 +6,7 @@ from pyspark.sql.types import IntegerType, StringType, StructType, StructField
 from pyspark.ml.recommendation import ALS
 '''
 -------------------------------------------
-    Description: TODO:
+    Description: 音乐数据推荐算法
     SourceFile: m1_music
     Author: SMOG
     Data: 2024/12/25
