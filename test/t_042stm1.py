@@ -31,7 +31,7 @@ if __name__ == '__main__':
         .config("spark.log.level", "ERROR") \
         .getOrCreate()
     print(spark)
-    spark.createDataFrame()
+    # spark.createDataFrame()
     # static = spark.read.json("file:///D:/XXX/PycharmProjects/Pyspark_sy/data/activity-data")
     static = spark.read.format("json") \
             .load("file:///D:/XXX/PycharmProjects/Pyspark_sy/data/activity-data")

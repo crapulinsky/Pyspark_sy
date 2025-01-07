@@ -34,12 +34,20 @@ if __name__ == '__main__':
     # pandas环境变量
     os.environ["PYARROW_IGNORE_TIMEZONE"] = "1"
 
+    # .config("spark.executor.resource.gpu.amount", "1") \
+    # .config("spark.task.resource.gpu.amount", "1") \
+    # .config("spark.executor.resource.gpu.memory.mb","4096") \
+    # .config("spark.rapids.sql.enabled","true") \
+
     # 创建 SparkSession
     spark = SparkSession.builder \
         .appName("m2_tree") \
         .master("local[*]") \
         .config("spark.driver.memory", "8g") \
         .getOrCreate()
+
+
+
 
     # 加载数据
     print("加载数据：")
